@@ -81,8 +81,6 @@ function renderCocktails(data) {
     likesButton.innerText = "like it";
     likesDiv.innerText = `${likes} likes`
     commentBtn.innerText = "comment";
-
-    
     
     newDiv.append(cocktailName, picture, recH4, likesDiv, likesButton, comments, commentInput, commentBtn);
     document.querySelector("#cocktail-card-container").append(newDiv);
