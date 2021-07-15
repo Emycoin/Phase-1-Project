@@ -9,9 +9,11 @@ window.addEventListener("DOMContentLoaded", (event) => {
   console.log("DOM fully loaded and parsed");
   document.querySelector("button").addEventListener("click", function () {
     event.preventDefault();
+
     console.log("hi");
     document.querySelectorAll(".recommendation-card").forEach((item) => item.remove());
     fetchdata(document.querySelector("#search-item").value);
+    
     document.querySelector('#sorry').remove()
   });
   document.querySelector('#random-btn').addEventListener('click', function(){
@@ -97,6 +99,7 @@ function renderCocktails(data) {
       const newComment = document.createElement("p");
       newComment.innerText = commentInput.value;
       comments.append(newComment);
+      commentInput.value = ''
     });
     likesButton.addEventListener("click", function () {
       likes++;
