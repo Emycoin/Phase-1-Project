@@ -14,12 +14,23 @@ window.addEventListener("DOMContentLoaded", (event) => {
     fetchdata(document.querySelector("#search-item").value);
     document.querySelector('#sorry').remove()
   });
+  document.querySelector('#random-btn').addEventListener('click', function(){
+    console.log('hi')
+    document.querySelectorAll(".recommendation-card").forEach((item) => item.remove());
+    fetchRandom();
+  })
 });
 function fetchdata(string) {
   fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${string}`)
     .then((res) => res.json())
     .then((data) => renderCocktails(data));
 }
+
+function fetchRandom(){
+   fetch(`https://www.thecocktaildb.com/api/json/v1/1/random.php`)
+   .then(res => res.json())
+   .then(data => renderCocktails(data))
+ }
 
 function renderCocktails(data) {
 
