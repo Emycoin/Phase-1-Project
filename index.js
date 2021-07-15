@@ -94,24 +94,3 @@ function renderCocktails(data) {
   });
 }
 
-// //for(let i=1; i<16; i++) {
-//     if(!drinkData[`strIngredient${i}`]) {
-//         break;
-//     }
-//     const ingred = drinkData[`strIngredient${i}`]
-//     const measurement = drinkData[`strMeasure${i}`]
-//     // some html would exisit for you to append this to
-//     renderMeasurements(ingred, measurement)
-
-// }
-
-// renderMeasurements(ingred, measure)  {
-//     const li = document.createElement('li')
-//     li.innerText = `${ingred} - ${measure}`
-//     document.querySelector('measurementlist id').append(li)
-// }
-
-// const ingred = drinkData[`strIngredient${i}`]
-// const measurement = drinkData[`strMeasure${i}`]
-// for(let i=1; i<16; i++){
-//  if(!drinkData[`strIngredient${i}`]) {
