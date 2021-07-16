@@ -13,13 +13,13 @@ window.addEventListener("DOMContentLoaded", (event) => {
     console.log("hi");
     document.querySelectorAll(".recommendation-card").forEach((item) => item.remove());
     fetchdata(document.querySelector("#search-item").value);
-    
     document.querySelector('#sorry').remove()
   });
   document.querySelector('#random-btn').addEventListener('click', function(){
     console.log('hi')
     document.querySelectorAll(".recommendation-card").forEach((item) => item.remove());
     fetchRandom();
+    document.querySelector('#sorry').remove()
   })
 });
 function fetchdata(string) {
